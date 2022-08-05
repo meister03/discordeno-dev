@@ -54,7 +54,8 @@ async function runMethod(rest, method, route, body, options) {
             url: route[0] === "/" ? `${constants_js_1.BASE_URL}/v${constants_js_1.API_VERSION}${route}` : route,
             method,
             reject: (data) => {
-                const restError = rest.convertRestError(errorStack, data);
+                const errorstack = new Error("Location:");
+                const restError = rest.convertRestError(errorstack, data);
                 reject(restError);
             },
             respond: (data) => resolve(data.status !== 204 ? JSON.parse(data.body ?? "{}") : undefined),

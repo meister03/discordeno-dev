@@ -3,7 +3,7 @@
   "main": "./script/mod.js",
   "types": "./types/mod.d.ts",
   "name": "discordeno",
-  "version": "v13-rc46",
+  "version": "13.0.0-rc46",
   "description": "Discordeno is simplistic, easy-to-use, versatile while being efficient and lightweight.",
   "keywords": [
     "javascript",
